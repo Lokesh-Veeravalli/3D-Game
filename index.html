@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D Chess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="board"></canvas>
+      <aside class="panel">
+        <h1>3D Chess</h1>
+        <p class="subtitle">You play White · Computer plays Black</p>
+        <p id="status" class="status" aria-live="polite">White to move</p>
+        <div class="controls">
+          <button id="new-game" type="button">New game</button>
+          <label class="depth">
+            AI depth
+            <select id="ai-depth" aria-label="AI search depth">
+              <option value="2">2 (faster)</option>
+              <option value="3" selected>3 (default)</option>
+            </select>
+          </label>
+        </div>
+        <p class="hint">Click a piece, then a highlighted square. Drag to orbit.</p>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
